@@ -295,3 +295,156 @@ header {
   background-color: #fff;
   color: #ffa500;
 }
+.categories1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  top: -10px;
+  padding: 10px 8px;
+  cursor: pointer;
+}
+
+.categories1:hover {
+  background-color: #ffa500;
+}
+
+.categories1:hover .categories1.un {
+  color: #064490;
+}
+
+.categoriesPrincipale {
+  display: flex;
+}
+
+.section-categories {
+  position: absolute;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 250px;
+  border-top: solid 0.3px #d5d1d1;
+  height: 78vh;
+}
+
+.section-categories3 {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  width: 248.5px;
+  border-top: solid 0.3px #d5d1d1;
+  height: 78vh;
+}
+
+.section-categories3 p {
+  font-size: 13px;
+  color: #222;
+  padding: 15px 35px;
+  font-weight: 550;
+}
+
+.section-categories3 p:hover {
+  cursor: pointer;
+  background-color: #e6dfdf;
+  color: #04418b;
+}
+
+.section-categories2 {
+  position: absolute;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
+  width: 248.5px;
+  border-top: solid 0.3px #d5d1d1;
+  height: 78vh;
+}
+
+.un {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.section-categories p {
+  color: #302f2f;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.section-categories p:hover {
+  color: #fff;
+}
+.un img{
+  width: 20px;
+}
+
+.deux img {
+  width: 18px;
+  position: relative;
+  top: -5px;
+}
+.rowP {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.images-chicken {
+  flex-basis: 19%;
+  box-shadow: 0 0 10px 0 rgba(160, 157, 157, 0.5);
+  padding: 15px;
+  margin: 4px 1px;
+}
+
+.images-chicken img {
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.images-chicken img:hover{
+  transform: scale(1.10);
+}
+.images-chicken h3 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.images-chicken h3 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.images-chicken p {
+  text-align: center;
+}
+
+.images-chicken a {
+  text-decoration: none;
+  color: #555;
+}
+
+.images-chicken a:hover {
+  color: #ffa500;
+}
+.rating{
+  color: #ffa500;
+}
+.recetteSection{
+  margin-top: 50px;
+}
+.recetteSection h2{
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
