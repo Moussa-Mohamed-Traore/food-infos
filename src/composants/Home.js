@@ -18,9 +18,23 @@ import RecettePork from './RecettePork'
 import RecetteBeef from './RecetteBeef'
 import RecetteSalmon from './RecetteSalmon'
 import RecetteLamb from './RecetteLamb'
+import Change from './change'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import avatar1 from '../images/avatar6.svg'
+import avatar2 from '../images/avatar7.svg'
+import avatar3 from '../images/avatar7.svg'
+import Footer from './footer'
+import RecetteChocolate from './components/RecetteChocolate'
+import RecetteHoney from './components/RecetteHoney'
+import RecetteCake from './components/RecetteCake'
+import RecetteSoup from './components/RecetteSoup'
+import AfficheSolution from '../afficheSolution'
 const Home = () => {
     const [activeMenu, setActiveMenu] = useState(null);
     const [istrue, setIstrue] = useState(null);
+    const [article, setArticle] = useState(true)
+    const [Article2, setArticle2] = useState(null)
     const HandleClickMenu = () => {
         setActiveMenu(true)
     }
@@ -150,8 +164,8 @@ const Home = () => {
             </div>
             <div>
             </div>
-            <div className="recetteSection">
-                <h2>Choisissez vos plats ici</h2>
+            {article && <div className="recetteSection">
+                <h2>Categories 1</h2>
                 <RecetteChicken />
                 <RecetteFish />
                 <RecettePotato />
@@ -159,7 +173,88 @@ const Home = () => {
                 <RecetteSalmon />
                 <RecettePork />
                 <RecetteLamb />
+            </div>}
+            {Article2 && <div className="recetteSection">
+                <h2>Categories 2</h2>
+                <RecetteSoup />
+                <RecetteCake />
+                <RecetteChocolate />
+                <RecetteHoney />
+                <RecetteSalmon />
+                <RecettePork />
+                <RecetteLamb />
+            </div>}
+            <div class="pagination">
+                <div className="containerHeader">
+                    <span onClick={(() => {
+                        setArticle(true)
+                        setArticle2(false)
+                    })}>&#8592;</span>
+                    <span onClick={(() => {
+                        setArticle(false)
+                        setArticle2(true)
+                    })}>&#8594;</span>
+
+                </div>
             </div>
+            <Change />
+            <section className='section3'>
+                <div className="row2">
+                    <div className="div-article">
+                        <hr />
+                    </div>
+                    <div className="div2">
+                        <h3>Articles créer</h3>
+                    </div>
+                    <div className="div-article">
+                        <hr />
+                    </div>
+                </div>
+            </section>
+            <AfficheSolution />
+            <section className="testimonial">
+                <div className="containerHeader">
+                    <div className="row">
+                        <div className="images-card">
+                            <p>Je suis tombée amoureuse de la cuisine grâce à FOOD-INFOS ! Les recettes sont si bien expliquées et délicieuses. J'ai même réussi à impressionner mes amis lors de notre dernière soirée à thème italienne. Merci pour cette source d'inspiration !</p>
+                            <img src={avatar1} alt="" />
+                            <div className="rating" style={{ color: '#fff' }}>
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                            </div>
+                            <h3>Sophie R. - Paris, France</h3>
+                        </div>
+                        <div className="images-card">
+                            <p>Je suis un étudiant et je n'avais aucune expérience en cuisine, mais grâce aux tutoriels vidéos de FOOD-INFOS, j'ai pu apprendre à cuisiner des plats simples et délicieux. Maintenant, je ne suis plus obligé de manger des plats surgelés tous les soirs !</p>
+                            <img src={avatar2} alt="" />
+                            <div className="rating" style={{ color: '#fff' }}>
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                            </div>
+                            <h3>Juan M. - Madrid, Espagne</h3>
+                        </div>
+                        <div className="images-card">
+                            <p>J'ai toujours été intimidé par la cuisine, mais FOOD-INFOS a rendu l'apprentissage tellement amusant et accessible. Les recettes sont si bien détaillées que je me sens comme un vrai chef chaque fois que je cuisine. Merci pour cette confiance que vous m'avez donnée en cuisine </p>
+                            <img src={avatar3} alt="" />
+                            <div className="rating" style={{ color: '#fff' }}>
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                            </div>
+                            <h3>Alexandre L. - Montréal, Canada</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <Footer />
         </div>
 
     );
