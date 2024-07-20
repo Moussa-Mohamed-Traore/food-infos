@@ -110,6 +110,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: CENTER;
+  flex-wrap: wrap;
 }
 .login button{
   padding: 10px 15px;
@@ -142,6 +143,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .entete {
   position: sticky;
@@ -160,6 +162,7 @@ header {
     display: flex;
     align-items: center;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .input select {
@@ -206,6 +209,7 @@ header {
 .part2 {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .part2 .menu {
@@ -230,6 +234,7 @@ header {
   display: flex;
   align-items: center;
   background-color: #fcfafa;
+  flex-wrap: wrap;
   padding-left: 10px;
   padding-right: 30px;
 }

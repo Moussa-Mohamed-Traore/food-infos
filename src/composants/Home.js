@@ -30,6 +30,9 @@ import RecetteHoney from './components/RecetteHoney'
 import RecetteCake from './components/RecetteCake'
 import RecetteSoup from './components/RecetteSoup'
 import AfficheSolution from '../afficheSolution'
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Home = () => {
     const [activeMenu, setActiveMenu] = useState(null);
     const [istrue, setIstrue] = useState(null);
@@ -47,6 +50,16 @@ const Home = () => {
     const cacher = () => {
         setIstrue(false);
     }
+    useEffect(() => {
+        AOS.init({
+         
+          duration: 2000, 
+          once: true 
+        });
+      }, []);
+
+      const [input, setInput] = useState('');
+
     // const array = [image, logo];
     // let index = 0;
     // const [images, setImages] = useState(null);
@@ -120,7 +133,10 @@ const Home = () => {
                                 <option value="Seafood">Autres recettes</option>
                             </select>
                             <div class="input-search">
-                                <input type="search" name="" placeholder="Rechercher des recettes ici" id="" />
+                                <input type="search" name="" value={input}
+                                 placeholder="Rechercher des recettes ici" id=""
+                                 onChange={(e) => setInput(e.target.value)}
+                                  />
                                 <div class="search-icons"><img src={search} alt="" width="33.5" /></div>
                             </div>
                         </div>
@@ -158,13 +174,13 @@ const Home = () => {
                     <p>Bienvenue dans votre Plateforme  BPROO-FOOD <br /> proposer la meilleur qualité est la ligne de conduite <br /> que s'est imposé depuis sa creation. Nous pouvons <br /> lui affirmer être la seule plateforme de Food à proposer <br /> une telle qualité de details sur les food </p>
                     <a href="">Search-Food &#8594; </a>
                 </div>
-                <div className="image-acceuil">
+                <div className="image-acceuil"  data-aos="zoom-in-up">
                     <img src={image} alt="" />
                 </div>
             </div>
             <div>
             </div>
-            {article && <div className="recetteSection">
+            {article && !input && <div className="recetteSection" data-aos="fade-right">
                 <h2>Categories 1</h2>
                 <RecetteChicken />
                 <RecetteFish />
@@ -174,7 +190,7 @@ const Home = () => {
                 <RecettePork />
                 <RecetteLamb />
             </div>}
-            {Article2 && <div className="recetteSection">
+            {Article2 && !input && <div className="recetteSection" data-aos="fade-right">
                 <h2>Categories 2</h2>
                 <RecetteSoup />
                 <RecetteCake />
@@ -212,7 +228,7 @@ const Home = () => {
                 </div>
             </section>
             <AfficheSolution />
-            <section className="testimonial">
+            <section className="testimonial" data-aos="fade-right">
                 <div className="containerHeader">
                     <div className="row">
                         <div className="images-card">
