@@ -625,6 +625,7 @@ footer{
 }
 .footer-g{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 0 120px;
 }
@@ -638,17 +639,21 @@ footer{
 .navbar ul{
   display: flex;
   align-items: center;
-  margin-top: 35px;
-  padding-right: 10px;
+  margin: 0 20px;
 }
 .navbar ul li{
   list-style-type: none;
-  margin: 0 30px;
-  color: #e4dcdcd0;
+  margin: 20px 0;
 }
-.nav ul li a{
+.navbar ul li a{
   text-decoration: none;
-  font-size: 10px;
+  font-size: 16px;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 15px;
+  background-color: #0000ff;
+
 }
 
 .footer-button p{
@@ -754,3 +759,10 @@ footer{
 .texte-page2-livre h2 {
   font-weight: bolder;
 } 
+
+
+@media only screen and (max-width: 768px){
+  *{
+    font-size: 15px;
+  }
+}

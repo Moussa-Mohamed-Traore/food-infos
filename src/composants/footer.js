@@ -4,6 +4,7 @@ import pinterest from '../images/pinterest.svg'
 import youtube from '../images/youtube.svg'
 import lindekin from '../images/linkedin-in.svg'
 import instagram from '../images/instagram.svg'
+import logo from '../images/logo.png'
 const Footer = () => {
     return (
         <footer class="footer">
@@ -29,33 +30,25 @@ const Footer = () => {
                 <div class="footer-p">
                     <div class="footer-g">
                         <div class="footer-image">
-                            <img src="images/logo-footer.png" alt="" width={200} />
-                            <p>A maxipanier.cm, nous sommes dévoué a vous faire <br /> vive la meilleur experience d'achat en
-                                ligne pour <br /> satisfaire vos besoins et vos envies au meilleur prix</p>
+                            <img src={logo} alt="" width={200} />
+                            <p>A FODD-INFOS, nous sommes dévoué a vous faire <br />  vive la meilleur experience d'apprendre  <br /> à cuisiner
+                                 en ligne pour  satisfaire vos familles et vos envies.</p>
                         </div>
                         <div class="navbar">
                             <ul>
-                                <li>Apropos de nous</li>
-                                <li>politique de retour</li>
+                                <li><a href="">Apropos de nous</a></li>
+                                <li><a href="">créer article</a></li>
                             </ul>
                             <ul>
-                                <li>Contactez nous</li>
-                                <li>Politique de livraison</li>
+                                <li><a href="">S'identifier</a></li>
+                                <li><a href="">page d'acceuil</a></li>
                             </ul>
                         </div>
-                        <div class="footer-button">
-                            <p>méthodes de paiement</p>
-                            <button>Paiement à la livraison</button>
-                            <p>méthodes de livraison</p>
-                            <div class="buttons">
-                                <button>Livraison fortifaires</button>
-                                <button>Livraison Negociable</button>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
-            <p class="dernier-p">&copy; Copyright Bproo Dev,Tous droits réservés</p>
+            <p class="dernier-p">&copy; Copyright FOOD-INFOS,Tous droits réservés</p>
         </footer>
     );
 }

@@ -170,8 +170,8 @@ const Home = () => {
             </section>}
             <div className="row-A">
                 <div className="text-acceuil">
-                    <h1>BPROO-FOOD</h1>
-                    <p>Bienvenue dans votre Plateforme  BPROO-FOOD <br /> proposer la meilleur qualité est la ligne de conduite <br /> que s'est imposé depuis sa creation. Nous pouvons <br /> lui affirmer être la seule plateforme de Food à proposer <br /> une telle qualité de details sur les food </p>
+                    <h1>FOOD-INFOS</h1>
+                    <p>Bienvenue dans votre Plateforme  FOOD-INFOS <br /> proposer la meilleur qualité est la ligne de conduite <br /> que s'est imposé depuis sa creation. Nous pouvons <br /> lui affirmer être la seule plateforme de Food à proposer <br /> une telle qualité de details sur les food </p>
                     <a href="">Search-Food &#8594; </a>
                 </div>
                 <div className="image-acceuil"  data-aos="zoom-in-up">
