@@ -33,6 +33,7 @@ import AfficheSolution from '../afficheSolution'
 import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import RechercherSearch from './componentsSearch/RecupererSearch'
 const Home = () => {
     const [activeMenu, setActiveMenu] = useState(null);
     const [istrue, setIstrue] = useState(null);
@@ -59,7 +60,12 @@ const Home = () => {
       }, []);
 
       const [input, setInput] = useState('');
+      const [inputValue, setInputValue] = useState('');
+      const handleClickSSearch = () =>{
+        setInputValue(input)
+      }
 
+    
     // const array = [image, logo];
     // let index = 0;
     // const [images, setImages] = useState(null);
@@ -136,8 +142,9 @@ const Home = () => {
                                 <input type="search" name="" value={input}
                                  placeholder="Rechercher des recettes ici" id=""
                                  onChange={(e) => setInput(e.target.value)}
+                                
                                   />
-                                <div class="search-icons"><img src={search} alt="" width="33.5" /></div>
+                                <div class="search-icons"  onClick={() => {handleClickSSearch()}}><img src={search} alt="" width="33.5" /></div>
                             </div>
                         </div>
                     </div>
@@ -168,7 +175,7 @@ const Home = () => {
                     <MenuGauche />
                 </div>
             </section>}
-            <div className="row-A">
+           { !input && <div className="row-A">
                 <div className="text-acceuil">
                     <h1>FOOD-INFOS</h1>
                     <p>Bienvenue dans votre Plateforme  FOOD-INFOS <br /> proposer la meilleur qualité est la ligne de conduite <br /> que s'est imposé depuis sa creation. Nous pouvons <br /> lui affirmer être la seule plateforme de Food à proposer <br /> une telle qualité de details sur les food </p>
@@ -177,9 +184,12 @@ const Home = () => {
                 <div className="image-acceuil"  data-aos="zoom-in-up">
                     <img src={image} alt="" />
                 </div>
-            </div>
+            </div>}
             <div>
             </div>
+           { inputValue && input && <div className='search'>
+            <RechercherSearch inputValue={inputValue} />
+            </div>}
             {article && !input && <div className="recetteSection" data-aos="fade-right">
                 <h2>Categories 1</h2>
                 <RecetteChicken />
@@ -270,7 +280,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+          
             <Footer />
+            
         </div>
 
     );
